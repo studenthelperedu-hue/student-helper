@@ -1,0 +1,950 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap');
+
+:root {
+    /* --- Modern Clean Design System --- */
+
+    /* 1. Core Palette (Strict) */
+    --color-bg-body: #FFFFFF;
+    --color-bg-surface: #FFFFFF;
+    --color-bg-alt: #F9FAFB;
+    /* Light Gray for section contrast */
+
+    --color-primary: #FF6600;
+    /* Vibrant Orange */
+    --color-primary-hover: #E65C00;
+    --color-primary-light: #FFF0E5;
+
+    --color-text-main: #111111;
+    /* Near Black */
+    --color-text-muted: #555555;
+    /* Medium Gray */
+    --color-text-light: #888888;
+    /* Light Gray */
+    --color-border: #E5E7EB;
+    /* Subtle Border */
+
+    /* 2. Typography */
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* 3. Spacing & Layout */
+    --container-width: 1280px;
+    --section-spacing: 96px;
+    /* Generous spacing */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-pill: 100px;
+
+    /* 4. Shadows (Soft & Modern) */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+
+    /* 5. Transitions */
+    --ease-default: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg-body);
+    color: var(--color-text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--color-text-main);
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--ease-default);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Layout Utilities */
+.container {
+    width: 92%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.section {
+    padding: var(--section-spacing) 0;
+}
+
+.bg-alt {
+    background-color: var(--color-bg-alt);
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gap-4 {
+    gap: 16px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Components */
+
+/* 1. Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    border-radius: var(--radius-pill);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--ease-default);
+    border: 1px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 102, 0, 0.25);
+}
+
+.btn-secondary {
+    background-color: white;
+    color: var(--color-text-main);
+    border-color: var(--color-border);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-bg-alt);
+    border-color: #d1d5db;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--color-text-main);
+    border: 1px solid var(--color-text-main);
+}
+
+.btn-outline:hover {
+    background: var(--color-text-main);
+    color: white;
+}
+
+.btn-sm {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+/* 2. Header (Sticky & Minimal) */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-border);
+    padding: 16px 0;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.logo span {
+    color: var(--color-primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--color-text-muted);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.header-cta {
+    display: flex;
+    gap: 12px;
+}
+
+/* 3. Hero Section */
+.hero-section {
+    padding: 120px 0;
+    background: white;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 16px;
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    border-radius: var(--radius-pill);
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    color: var(--color-text-main);
+}
+
+.hero-title span {
+    color: var(--color-primary);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 4. Cards (Clean & Soft + 3D Ready) */
+.card-clean {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 32px;
+    /* transition: var(--ease-default); <-- Removing generic transition to let JS handle physics */
+    transition: border-color 0.3s, box-shadow 0.3s;
+    /* 3D Properties */
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+/* Hover state is now handled by JS for transform, but we keep shadow/border */
+.card-clean:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary);
+}
+
+/* Batch/Course Card Specifics */
+.course-card {
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /* transition: var(--ease-default); <-- Removing generic transition */
+    transition: border-color 0.3s, box-shadow 0.3s;
+    /* 3D Properties */
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.course-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+}
+
+.course-thumb {
+    height: 200px;
+    background: #F3F4F6;
+    position: relative;
+    pointer-events: none;
+    /* Prevent image dragging interfering with tilt */
+}
+
+.course-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.course-content {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    /* Text shouldn't block mousemove */
+}
+
+/* Re-enable pointer events for buttons inside */
+.course-content button,
+.course-content a {
+    pointer-events: auto;
+}
+
+.course-title {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+}
+
+.course-meta {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-bottom: 16px;
+    display: flex;
+    gap: 16px;
+}
+
+.course-meta i {
+    color: var(--color-primary);
+    margin-right: 6px;
+}
+
+.price-row {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+}
+
+.price span {
+    font-size: 0.9rem;
+    text-decoration: line-through;
+    color: var(--color-text-light);
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+/* 5. Footer */
+footer {
+    background: #F8F8F8;
+    padding: 80px 0 40px;
+    border-top: 1px solid var(--color-border);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.footer-col h4 {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+    color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .grid-4,
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .nav-links,
+    .desktop-only {
+        display: none;
+    }
+
+    .hero-section {
+        padding: 80px 0;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .grid-4,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .course-card {
+        flex-direction: row;
+        height: auto;
+        align-items: center;
+        padding: 16px;
+    }
+
+    .course-thumb {
+        width: 100px;
+        height: 100px;
+        border-radius: var(--radius-sm);
+        margin-right: 16px;
+        flex-shrink: 0;
+    }
+
+    .course-content {
+        padding: 0;
+        border: none;
+    }
+
+    .course-meta {
+        display: none;
+    }
+
+    .price-row {
+        border: none;
+        padding: 0;
+        margin-top: 8px;
+    }
+
+    /* Disable Tilt on Mobile for performance/usability */
+    .card-clean,
+    .course-card {
+        transform: none !important;
+    }
+}
+
+/* Mobile Bottom Nav */
+.mobile-bottom-nav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-top: 1px solid #eee;
+    padding: 10px 0;
+    justify-content: space-around;
+    z-index: 1001;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.75rem;
+    color: #666;
+    gap: 4px;
+}
+
+.nav-item i {
+    font-size: 1.2rem;
+}
+
+.nav-item.active {
+    color: var(--color-primary);
+}
+
+/* --- New Components --- */
+
+/* 1. Tables (for Courses & Scholarship) */
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 32px;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    min-width: 600px;
+    /* Prevent squishing on mobile */
+}
+
+.custom-table th,
+.custom-table td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.custom-table th {
+    background-color: var(--color-bg-alt);
+    font-weight: 700;
+    color: var(--color-text-main);
+    font-family: var(--font-heading);
+}
+
+.custom-table tr:hover {
+    background-color: #FAFAF9;
+}
+
+.custom-table td {
+    color: var(--color-text-muted);
+}
+
+/* 2. Timeline (for Admission Process) */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--color-border);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background-color: white;
+    border: 4px solid var(--color-primary);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+.right::after {
+    left: -10px;
+}
+
+.timeline-content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
+}
+
+/* Timeline Responsive */
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 31px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-item::after {
+        left: 21px;
+    }
+
+    .right {
+        left: 0%;
+    }
+}
+
+/* 3. Modal (Talent Search Form) */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.open {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: var(--radius-md);
+    padding: 32px;
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    box-shadow: var(--shadow-lg);
+}
+
+.modal-overlay.open .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-text-muted);
+}
+
+.modal-close:hover {
+    color: var(--color-primary);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+/* 4. Why Choose Us List */
+.why-us-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.why-us-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: white;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+    transition: transform 0.2s;
+}
+
+.why-us-item:hover {
+    transform: translateX(8px);
+    border-color: var(--color-primary);
+}
+
+.why-us-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Premium Course Cards */
+.section-subtitle {
+    font-size: 1.5rem;
+    color: var(--color-text-main);
+    border-bottom: 2px solid var(--color-primary);
+    display: inline-block;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+}
+
+.course-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    border-color: rgba(255, 102, 0, 0.2);
+}
+
+.course-header {
+    background: #fafafa;
+    padding: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: var(--color-primary);
+    color: white;
+    font-size: 0.6rem;
+    padding: 2px 6px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.course-header h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--color-text-main);
+    font-weight: 700;
+}
+
+.duration {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.course-body {
+    padding: 12px;
+    flex-grow: 1;
+}
+
+.price-tag {
+    margin-bottom: 8px;
+    color: var(--color-text-main);
+    font-weight: 800;
+    font-size: 1.35rem;
+    line-height: 1;
+}
+
+.price-tag .currency {
+    font-size: 1rem;
+    vertical-align: top;
+    margin-right: 2px;
+}
+
+.price-tag .tax {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-weight: 400;
+}
+
+.registration-fee {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.inclusions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.inclusions li {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.inclusions li i {
+    color: #10B981;
+    /* Green check */
+    margin-top: 3px;
+}
+
+.course-footer {
+    padding: 12px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    background: #fff;
+}
+
+/* Mini Card for Subjects */
+.mini-card .course-header {
+    padding: 16px;
+}
+
+.mini-card .course-body {
+    padding: 16px;
+    text-align: center;
+}
+
+.mini-card h4 {
+    font-size: 1.1rem;
+}
+
+.price-tag-sm {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+}
+
+.highlight {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    background: #fff3e6;
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+/* Helper Grid */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.btn-block {
+    width: 100%;
+    display: block;
+}
+
+@media (max-width: 768px) {
+
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr !important;
+    }
+
+    .badge {
+        position: relative;
+        top: 0;
+        right: 0;
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+
+    /* Sticky Mobile Buy Button adjustments if needed can go here */
+}

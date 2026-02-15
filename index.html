@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Helper - Top Coaching for JEE & NEET</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container flex-between">
+            <a href="index.html" class="logo">Student<span>Helper</span>.</a>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="courses.html">Batches</a></li>
+                <li><a href="test-series.html">Test Series</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Centers</a></li>
+            </ul>
+
+            <div class="header-cta desktop-only">
+                <a href="#" class="btn btn-outline btn-sm">Login</a>
+                <button class="btn btn-primary btn-sm open-modal-btn">Talent Search Exam</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container hero-content">
+            <span class="hero-badge"><i class="fas fa-bolt"></i> New Batches Starting Soon</span>
+            <h1 class="hero-title">Crack JEE & NEET with <br> <span>India's Best Faculty</span></h1>
+            <p class="hero-subtitle">Premium education at affordable prices. Join thousands of students achieving their
+                dream ranks.</p>
+            <div class="flex-center gap-4">
+                <a href="courses.html" class="btn btn-primary">Explore Batches</a>
+                <a href="#demo" class="btn btn-secondary">Watch Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome & Vision Section -->
+    <section class="section">
+        <div class="container">
+            <div class="grid-3" style="grid-template-columns: 1.5fr 1fr; gap: 64px;">
+                <div>
+                    <h2 style="margin-bottom: 24px;">Welcome to Student Helper</h2>
+                    <p style="color:var(--color-text-muted); font-size: 1.1rem; margin-bottom: 24px;">
+                        At STUDENT HELPER, we believe every student holds extraordinary potential. The path to IITs,
+                        NITs, AIIMS, and premiere institutes demands strategy, guidance, and ecosystem support.
+                    </p>
+                    <p style="color:var(--color-text-muted); font-size: 1.1rem; margin-bottom: 32px;">
+                        We build engineers and doctors by developing analytical thinking, problem-solving ability, and
+                        exam temperament.
+                    </p>
+
+                    <h3 style="margin-bottom: 16px;">Our Mission</h3>
+                    <ul class="why-us-list">
+                        <li class="why-us-item">
+                            <div class="why-us-icon"><i class="fas fa-book-reader"></i></div>
+                            <div><strong>Competition-Focused Curriculum</strong></div>
+                        </li>
+                        <li class="why-us-item">
+                            <div class="why-us-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                            <div><strong>Personalized Mentorship</strong></div>
+                        </li>
+                        <li class="why-us-item">
+                            <div class="why-us-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                            <div><strong>Transparent Scholarships</strong></div>
+                        </li>
+                        <li class="why-us-item">
+                            <div class="why-us-icon"><i class="fas fa-brain"></i></div>
+                            <div><strong>Build Resilience & Discipline</strong></div>
+                        </li>
+                        <li class="why-us-item">
+                            <div class="why-us-icon"><i class="fas fa-lightbulb"></i></div>
+                            <div><strong>Innovative Teaching Methods</strong></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="card-clean"
+                        style="height: 100%; display: flex; flex-direction: column; justify-content: center; background: var(--color-bg-alt);">
+                        <div class="text-center">
+                            <i class="fas fa-eye fa-3x" style="color: var(--color-primary); margin-bottom: 24px;"></i>
+                            <h3 style="margin-bottom: 16px;">Our Vision</h3>
+                            <p style="font-size: 1.2rem; color: var(--color-text-muted); font-style: italic;">
+                                "To become India’s most impactful learning institution shaping minds that build and heal
+                                the nation."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section bg-alt">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 48px;">Why Choose Us?</h2>
+            <div class="grid-4" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                <div class="card-clean text-center">
+                    <i class="fas fa-user-md fa-2x" style="color:var(--color-primary); margin-bottom:16px;"></i>
+                    <h4>Expert Faculty</h4>
+                    <p style="color:var(--color-text-muted); margin-top:8px;">IIT/NIT/MBBS Alumni</p>
+                </div>
+                <div class="card-clean text-center">
+                    <i class="fas fa-layer-group fa-2x" style="color:var(--color-primary); margin-bottom:16px;"></i>
+                    <h4>Study Ecosystem</h4>
+                    <p style="color:var(--color-text-muted); margin-top:8px;">Teaching + DPP + Tests</p>
+                </div>
+                <div class="card-clean text-center">
+                    <i class="fas fa-users fa-2x" style="color:var(--color-primary); margin-bottom:16px;"></i>
+                    <h4>Small Batch Mentorship</h4>
+                    <p style="color:var(--color-text-muted); margin-top:8px;">Personalized Attention</p>
+                </div>
+                <div class="card-clean text-center">
+                    <i class="fas fa-book-open fa-2x" style="color:var(--color-primary); margin-bottom:16px;"></i>
+                    <h4>Educomb Material</h4>
+                    <p style="color:var(--color-text-muted); margin-top:8px;">Research-based Content</p>
+                </div>
+                <div class="card-clean text-center">
+                    <i class="fas fa-chart-line fa-2x" style="color:var(--color-primary); margin-bottom:16px;"></i>
+                    <h4>Analytics</h4>
+                    <p style="color:var(--color-text-muted); margin-top:8px;">Recorded Lectures & Reports</p>
+                </div>
+                <div class="card-clean text-center">
+                    <i class="fas fa-award fa-2x" style="color:var(--color-primary); margin-bottom:16px;"></i>
+                    <h4>Scholarships</h4>
+                    <p style="color:var(--color-text-muted); margin-top:8px;">Transparent & Merit-based</p>
+                </div>
+                <div class="card-clean text-center">
+                    <i class="fas fa-user-friends fa-2x" style="color:var(--color-primary); margin-bottom:16px;"></i>
+                    <h4>Parent Reports</h4>
+                    <p style="color:var(--color-text-muted); margin-top:8px;">Regular Progress Updates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Batches -->
+    <section class="section">
+        <div class="container">
+            <h2 style="margin-bottom: 40px; text-align: center;">Our Premium Courses</h2>
+
+            <!-- Integrated JEE Programs -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h3 class="section-subtitle">Integrated JEE Programs</h3>
+                </div>
+            </div>
+            <div class="grid-3">
+                <!-- Card 1 -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <span class="badge">Best Seller</span>
+                        <h4>JEE Main + Advanced</h4>
+                        <p class="duration"><i class="far fa-clock"></i> 2 Years Duration</p>
+                    </div>
+                    <div class="course-body">
+                        <div class="price-tag">
+                            <span class="currency">₹</span>3,50,000 <span class="tax">+ GST</span>
+                            <div class="registration-fee">Reg: ₹600</div>
+                        </div>
+                        <ul class="inclusions">
+                            <li><i class="fas fa-check"></i> Full syllabus coverage</li>
+                            <li><i class="fas fa-check"></i> Problem solving sessions</li>
+                            <li><i class="fas fa-check"></i> Tests & DPP</li>
+                            <li><i class="fas fa-check"></i> Study materials</li>
+                            <li><i class="fas fa-check"></i> All India Test Series</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <button class="btn btn-primary btn-block open-enroll-modal"
+                            data-course="JEE Main + Advanced (2 Years)" data-price="₹3,50,000 + GST">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <h4>JEE Main</h4>
+                        <p class="duration"><i class="far fa-clock"></i> 1 Year Duration</p>
+                    </div>
+                    <div class="course-body">
+                        <div class="price-tag">
+                            <span class="currency">₹</span>1,50,000 <span class="tax">+ GST</span>
+                            <div class="registration-fee">Reg: ₹600</div>
+                        </div>
+                        <ul class="inclusions">
+                            <li><i class="fas fa-check"></i> Full syllabus coverage</li>
+                            <li><i class="fas fa-check"></i> Problem solving sessions</li>
+                            <li><i class="fas fa-check"></i> Tests & DPP</li>
+                            <li><i class="fas fa-check"></i> Study materials</li>
+                            <li><i class="fas fa-check"></i> All India Test Series</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <button class="btn btn-primary btn-block open-enroll-modal" data-course="JEE Main (1 Year)"
+                            data-price="₹1,50,000 + GST">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <h4>JEE Advanced</h4>
+                        <p class="duration"><i class="far fa-clock"></i> 1 Year Duration</p>
+                    </div>
+                    <div class="course-body">
+                        <div class="price-tag">
+                            <span class="currency">₹</span>1,50,000 <span class="tax">+ GST</span>
+                            <div class="registration-fee">Reg: ₹600</div>
+                        </div>
+                        <ul class="inclusions">
+                            <li><i class="fas fa-check"></i> Full syllabus coverage</li>
+                            <li><i class="fas fa-check"></i> Problem solving sessions</li>
+                            <li><i class="fas fa-check"></i> Tests & DPP</li>
+                            <li><i class="fas fa-check"></i> Study materials</li>
+                            <li><i class="fas fa-check"></i> All India Test Series</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <button class="btn btn-primary btn-block open-enroll-modal" data-course="JEE Advanced (1 Year)"
+                            data-price="₹1,50,000 + GST">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Integrated NEET Programs -->
+            <div class="row mb-5 mt-5">
+                <div class="col-12">
+                    <h3 class="section-subtitle">Integrated NEET Programs</h3>
+                </div>
+            </div>
+            <div class="grid-3" style="justify-content: center;"> <!-- Centered if less than 3 -->
+                <!-- Card 4 -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <span class="badge">Popular</span>
+                        <h4>NEET 2 Year</h4>
+                        <p class="duration"><i class="far fa-clock"></i> 2 Years Duration</p>
+                    </div>
+                    <div class="course-body">
+                        <div class="price-tag">
+                            <span class="currency">₹</span>3,50,000 <span class="tax">+ GST</span>
+                        </div>
+                        <ul class="inclusions">
+                            <li><i class="fas fa-check"></i> NCERT focused learning</li>
+                            <li><i class="fas fa-check"></i> Diagram teaching</li>
+                            <li><i class="fas fa-check"></i> Mock tests</li>
+                            <li><i class="fas fa-check"></i> Gap analysis</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <button class="btn btn-primary btn-block open-enroll-modal" data-course="NEET 2 Year"
+                            data-price="₹3,50,000 + GST">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <h4>NEET Dropper</h4>
+                        <p class="duration"><i class="far fa-clock"></i> 1 Year Duration</p>
+                    </div>
+                    <div class="course-body">
+                        <div class="price-tag">
+                            <span class="currency">₹</span>1,50,000 <span class="tax">+ GST</span>
+                        </div>
+                        <ul class="inclusions">
+                            <li><i class="fas fa-check"></i> NCERT focused learning</li>
+                            <li><i class="fas fa-check"></i> Diagram teaching</li>
+                            <li><i class="fas fa-check"></i> Mock tests</li>
+                            <li><i class="fas fa-check"></i> Gap analysis</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <button class="btn btn-primary btn-block open-enroll-modal" data-course="NEET Dropper"
+                            data-price="₹1,50,000 + GST">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pre-Foundation -->
+            <div class="row mb-5 mt-5">
+                <div class="col-12">
+                    <h3 class="section-subtitle">Pre-Foundation</h3>
+                </div>
+            </div>
+            <div class="grid-3" style="justify-content: center;">
+                <div class="course-card featured-card">
+                    <div class="course-header">
+                        <h4>Class 9 - 10 Foundation</h4>
+                        <p class="duration"><i class="far fa-clock"></i> 1-2 Years</p>
+                    </div>
+                    <div class="course-body">
+                        <div class="price-tag">
+                            <span class="currency">₹</span>1,50,000 <span class="tax">+ GST</span>
+                        </div>
+                        <ul class="inclusions">
+                            <li><i class="fas fa-check"></i> Olympiad prep</li>
+                            <li><i class="fas fa-check"></i> Logic workshops</li>
+                            <li><i class="fas fa-check"></i> Concept building</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <button class="btn btn-primary btn-block open-enroll-modal"
+                            data-course="Pre-Foundation (Class 9-10)" data-price="₹1,50,000 + GST">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Subject Specialization -->
+            <div class="row mb-5 mt-5">
+                <div class="col-12">
+                    <h3 class="section-subtitle">Subject Specialization</h3>
+                </div>
+            </div>
+            <div class="grid-4">
+                <!-- Math -->
+                <div class="course-card mini-card">
+                    <div class="course-header">
+                        <h4>Mathematics</h4>
+                        <p class="duration">1/2 Year</p>
+                    </div>
+                    <div class="course-body">
+                        <div class="price-tag-sm">₹80k–1.5L</div>
+                        <p class="highlight">Concept Mastery</p>
+                    </div>
+                    <div class="course-footer">
+                        <button class="btn btn-outline btn-sm btn-block open-enroll-modal"
+                            data-course="Mathematics Specialization" data-price="₹80k–1.5L">Buy Now</button>
+                    </div>
+                </div>
+                <!-- Physics -->
+                <div class="course-card mini-card">
+                    <div class="course-header">
+                        <h4>Physics</h4>
+                        <p class="duration">1/2 Year</p>
+                    </div>
+                    <div class="course-body">
+                        <div class="price-tag-sm">₹80k–1.2L</div>
+                        <p class="highlight">Concept Mastery</p>
+                    </div>
+                    <div class="course-footer">
+                        <button class="btn btn-outline btn-sm btn-block open-enroll-modal"
+                            data-course="Physics Specialization" data-price="₹80k–1.2L">Buy Now</button>
+                    </div>
+                </div>
+                <!-- Chemistry -->
+                <div class="course-card mini-card">
+                    <div class="course-header">
+                        <h4>Chemistry</h4>
+                        <p class="duration">1/2 Year</p>
+                    </div>
+                    <div class="course-body">
+                        <div class="price-tag-sm">₹80k–1.2L</div>
+                        <p class="highlight">Concept Mastery</p>
+                    </div>
+                    <div class="course-footer">
+                        <button class="btn btn-outline btn-sm btn-block open-enroll-modal"
+                            data-course="Chemistry Specialization" data-price="₹80k–1.2L">Buy Now</button>
+                    </div>
+                </div>
+                <!-- Biology -->
+                <div class="course-card mini-card">
+                    <div class="course-header">
+                        <h4>Biology</h4>
+                        <p class="duration">1/2 Year</p>
+                    </div>
+                    <div class="course-body">
+                        <div class="price-tag-sm">₹80k–1.2L</div>
+                        <p class="highlight">Concept Mastery</p>
+                    </div>
+                    <div class="course-footer">
+                        <button class="btn btn-outline btn-sm btn-block open-enroll-modal"
+                            data-course="Biology Specialization" data-price="₹80k–1.2L">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="margin-bottom: 20px; display:block;">Student<span>Helper</span>.</a>
+                    <p style="color:var(--color-text-muted); font-size:0.9rem; margin-bottom: 16px;">
+                        <strong>Address:</strong><br>
+                        Metro Gate-4, Vijay Mandal Enclave<br>
+                        59/1, Ground Floor Kalu Sarai, Hauz Khas Rd<br>
+                        Near Kalu Sarai Masjid, New Delhi – 110016
+                    </p>
+                    <p style="color:var(--color-text-muted); font-size:0.9rem; margin-bottom: 16px;">
+                        <strong>Helpline:</strong><br>
+                        8800521054, 8800571062
+                    </p>
+                    <p style="color:var(--color-text-muted); font-size:0.9rem; margin-bottom: 16px;">
+                        <strong>Email:</strong><br>
+                        studenthelperedu@gmail.com
+                    </p>
+                    <p style="color:var(--color-text-muted); font-size:0.9rem;">
+                        <strong>Bank Details:</strong><br>
+                        (Insert Bank Details Here)
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Courses</h4>
+                    <ul class="footer-links">
+                        <li><a href="scholarship.html">Scholarship</a></li>
+                        <li><a href="admission.html">Admission Process</a></li>
+                        <li><a href="#">JEE Main & Advanced</a></li>
+                        <li><a href="#">NEET UG</a></li>
+                        <li><a href="#">Class 10 Foundation</a></li>
+                        <li><a href="#">School Prep</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get the App</h4>
+                    <p style="color:var(--color-text-muted); margin-bottom:16px;">Download our app for the best learning
+                        experience.</p>
+                    <a href="#" class="btn btn-primary btn-sm"><i class="fab fa-google-play"></i> Google Play</a>
+                </div>
+            </div>
+            <div
+                style="border-top:1px solid #e5e7eb; padding-top:24px; text-align:center; color:var(--color-text-light); font-size:0.85rem;">
+                &copy; 2026 Student Helper. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Nav -->
+    <div class="mobile-bottom-nav">
+        <a href="index.html" class="nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="courses.html" class="nav-item">
+            <i class="fas fa-layer-group"></i>
+            <span>Batches</span>
+        </a>
+        <a href="resources.html" class="nav-item">
+            <i class="fas fa-book"></i>
+            <span>Study</span>
+        </a>
+        <a href="profile.html" class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </div>
+
+    <!-- Enrollment Modal -->
+    <div class="modal-overlay" id="enroll-modal">
+        <div class="modal-content">
+            <button class="modal-close-enroll">&times;</button>
+            <h2 style="margin-bottom: 24px; text-align: center;">Course Enrollment</h2>
+            <form id="enroll-form">
+                <div class="form-group"
+                    style="background: #f9f9f9; padding: 12px; border-radius:8px; margin-bottom:20px;">
+                    <label class="form-label" style="font-size: 0.85rem; color: var(--color-text-muted);">Selected
+                        Course</label>
+                    <input type="text" id="course-name-field" class="form-control"
+                        style="font-weight:700; border:none; background:transparent; padding:0;" readonly>
+                    <div id="course-price-field" style="color: var(--color-primary); font-weight:bold;"></div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Student Name *</label>
+                    <input type="text" class="form-control" required placeholder="Enter Full Name">
+                </div>
+
+                <div class="grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div>
+                        <label class="form-label">Phone *</label>
+                        <input type="tel" class="form-control" required placeholder="10-digit Mobile">
+                    </div>
+                    <div>
+                        <label class="form-label">Email *</label>
+                        <input type="email" class="form-control" required placeholder="your@email.com">
+                    </div>
+                </div>
+
+                <div class="payment-section"
+                    style="margin: 24px 0; border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: 16px; text-align:center;">
+                    <label class="form-label" style="display:block; margin-bottom:12px;">Scan & Pay</label>
+                    <div
+                        style="background: #eee; width: 150px; height: 150px; margin: 0 auto 12px; display:flex; align-items:center; justify-content:center; color:#888;">
+                        <i class="fas fa-qrcode fa-3x"></i>
+                    </div>
+                    <p style="font-size:0.8rem; color: var(--color-text-muted);">UPI / Wallet / Net Banking</p>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Upload Payment Screenshot *</label>
+                    <input type="file" class="form-control" required accept="image/*">
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" style="width: 100%; margin-top: 16px;">
+                    Confirm & Enroll
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="modal-overlay" id="talent-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 style="margin-bottom: 24px; text-align: center;">Talent Search Exam Registration</h2>
+            <form id="talent-form">
+                <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                    <div>
+                        <label class="form-label">Student Name *</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div>
+                        <label class="form-label">Father's Name *</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                    <div>
+                        <label class="form-label">Date of Birth *</label>
+                        <input type="date" class="form-control" required>
+                    </div>
+                    <div>
+                        <label class="form-label">Gender *</label>
+                        <select class="form-control" required>
+                            <option value="">Select</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                    <div>
+                        <label class="form-label">Phone / WhatsApp *</label>
+                        <input type="tel" class="form-control" required>
+                    </div>
+                    <div>
+                        <label class="form-label">Email *</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Full Address *</label>
+                    <textarea class="form-control" rows="2" required></textarea>
+                </div>
+
+                <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                    <div>
+                        <label class="form-label">Class Studying *</label>
+                        <select class="form-control" required>
+                            <option value="">Select</option>
+                            <option>8th</option>
+                            <option>9th</option>
+                            <option>10th</option>
+                            <option>11th</option>
+                            <option>12th</option>
+                            <option>Dropper</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="form-label">Board *</label>
+                        <select class="form-control" required>
+                            <option value="">Select</option>
+                            <option>CBSE</option>
+                            <option>ICSE</option>
+                            <option>State</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">School Name</label>
+                    <input type="text" class="form-control">
+                </div>
+
+                <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                    <div>
+                        <label class="form-label">Exam Selection *</label>
+                        <select class="form-control" required>
+                            <option value="">Select</option>
+                            <option>JEE</option>
+                            <option>NEET</option>
+                            <option>Foundation</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="form-label">Mode *</label>
+                        <select class="form-control" required>
+                            <option value="">Select</option>
+                            <option>Online</option>
+                            <option>Offline</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                    <div>
+                        <label class="form-label">Payment Mode</label>
+                        <select class="form-control">
+                            <option value="">Select</option>
+                            <option>Online (UPI/Card)</option>
+                            <option>Cash (Center)</option>
+                            <option>Cheque/DD</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="form-label">Photo Upload</label>
+                        <input type="file" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group"
+                    style="padding: 16px; border: 1px dashed var(--color-border); border-radius: var(--radius-sm); text-align: center; background: var(--color-bg-alt);">
+                    <label class="form-label" style="display: block; margin-bottom: 8px;">Signature Placeholder</label>
+                    <div
+                        style="height: 40px; display: flex; align-items: center; justify-content: center; color: var(--color-text-light);">
+                        [Sign Here]
+                    </div>
+                    <input type="file" class="form-control" style="margin-top:8px;">
+                </div>
+
+                <div class="form-group">
+                    <label style="display: flex; align-items: start; gap: 10px; font-size: 0.9rem;">
+                        <input type="checkbox" required style="margin-top: 4px;">
+                        <span>I declare that the information provided is true to the best of my knowledge.</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Register Now</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Script Clean -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>

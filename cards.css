@@ -1,0 +1,183 @@
+/* Premium Course Cards */
+.section-subtitle {
+    font-size: 1.5rem;
+    color: var(--color-text-main);
+    border-bottom: 2px solid var(--color-primary);
+    display: inline-block;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+}
+
+.course-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    border-color: rgba(255, 102, 0, 0.2);
+}
+
+.course-header {
+    background: #fafafa;
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: var(--color-primary);
+    color: white;
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.course-header h4 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--color-text-main);
+    font-weight: 700;
+}
+
+.duration {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.course-body {
+    padding: 24px;
+    flex-grow: 1;
+}
+
+.price-tag {
+    margin-bottom: 20px;
+    color: var(--color-text-main);
+    font-weight: 800;
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.price-tag .currency {
+    font-size: 1rem;
+    vertical-align: top;
+    margin-right: 2px;
+}
+
+.price-tag .tax {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-weight: 400;
+}
+
+.registration-fee {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.inclusions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.inclusions li {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.inclusions li i {
+    color: #10B981;
+    /* Green check */
+    margin-top: 3px;
+}
+
+.course-footer {
+    padding: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    background: #fff;
+}
+
+/* Mini Card for Subjects */
+.mini-card .course-header {
+    padding: 16px;
+}
+
+.mini-card .course-body {
+    padding: 16px;
+    text-align: center;
+}
+
+.mini-card h4 {
+    font-size: 1.1rem;
+}
+
+.price-tag-sm {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+}
+
+.highlight {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    background: #fff3e6;
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+/* Helper Grid */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.btn-block {
+    width: 100%;
+    display: block;
+}
+
+@media (max-width: 768px) {
+
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr !important;
+    }
+
+    .badge {
+        position: relative;
+        top: 0;
+        right: 0;
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+
+    /* Sticky Mobile Buy Button adjustments if needed can go here */
+}
